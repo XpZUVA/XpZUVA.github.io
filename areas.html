@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dreamland</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" href="css/stylesArea.css">
+        <link rel="icon" href="/assets/logos/logo.ico">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    </head>
+    <body class="bg-custom text-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-nav-footer">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="/assets/logos/logo.png" alt=""></a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-icon top-bar"></span>
+                <span class="toggler-icon middle-bar"></span>
+                <span class="toggler-icon bottom-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item" id="idGroup">
+                        <p class="nav-link active">P03</p>
+                    </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="areas.html">Areas temáticas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="espectaculos.html">Espectáculos</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Cuenta
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="cuenta.html">Perfil</a></li>
+                    <li><a class="dropdown-item" href="login.html">Iniciar sesión</a></li>
+                    <li><a class="dropdown-item" href="register.html">Registrarse</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" id="logout" href="">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+                </ul>
+                <form class="d-flex">
+                </form>
+            </div>
+            </div>
+        </nav>
+    </body>
+    <div id="areas-container"></div>
+    <footer class="bg-nav-footer">
+        <div class="contacto">
+            <h3>Contáctanos:</h3>
+            <p>Email: <a href="">dreamland-contact@dreamland.es</a></p>
+            <p>Teléfono: <span>912345678</span></p>
+        </div>
+        <ul class="redesSociales">
+            <li><a class="redSocialButton" href="https://www.instagram.com/parquedeatraccionesmadrid/"><img src="/assets/imagenes/redes/instagram.png" alt="Instagram"></a></li> 
+            <li><a class="redSocialButton" href="https://www.facebook.com/parquedeatracciones/?locale=es_ES"><img src="/assets/imagenes/redes/facebook.png" alt="Facebook"></a></li>
+            <li><a class="redSocialButton" href="https://x.com/patraccionesmad"><img src="/assets/imagenes/redes/twitter.png" alt="Twitter"></a></li>   
+            <li><a class="redSocialButton" href="https://youtu.be/yk05VoSb-dE?si=HxYWB1_AmWyaEssR"><img src="/assets/imagenes/redes/youtube.png" alt="YouTube"></a></li>           
+        </ul>
+        <p id="Copyright">© 2024 Dreamland. Todos los derechos reservados.</p>
+    </footer>
+    <script src="/scripts/areas.js"></script>
+    <script src="/scripts/loginButton.js"></script>
+    <script src="scripts/loggedIn.js"></script>
+    <script src="/scripts/account.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+</html> 

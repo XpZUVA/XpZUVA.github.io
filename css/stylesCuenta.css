@@ -1,0 +1,147 @@
+:root {
+    --color-1: #1D1A39;
+    --color-2: #451952;
+    --color-3: #662549;
+    --color-4: #AE445A;
+    --color-5: #F39F5A;
+    --color-6: #E8BCB9;
+    --colorBG: #1a1a1a;
+}
+
+
+.profile-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Profile Image */
+#profile-image{
+    width: 200px; 
+    height: 200px; 
+    overflow: hidden; 
+    position: relative;
+    margin: 1vw;
+    border-radius: 50%;
+}
+
+#profile-image img{
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    position: absolute; /* Posiciona la imagen de manera absoluta */
+    top: 50%; /* Posiciona la imagen verticalmente en el centro */
+    left: 50%; /* Posiciona la imagen horizontalmente en el centro */
+    transform: translate(-50%, -50%); /* Centra la imagen en el contenedor */
+}
+
+/*FILE INPUT*/
+#file-input {
+    display: none;
+}
+
+.custom-file-label {
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent; 
+    color: white; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease; 
+}
+
+.custom-file-label:hover {
+    background-color: var(--color-4); 
+}
+
+/* Profile Info */
+.profile-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 1vw;
+}
+
+.profile-info h2{
+    color: white;
+    font-size: 34px;
+    margin: 1vw;
+}
+
+.profile-info h3{
+    color: white;
+    font-size: 1.5vw;
+    margin: 1vw;
+}
+
+.atraccionesFav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 20%;
+    margin: 1vw;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    
+}
+
+.atraccionesFav {
+    transition: transform 0.3s ease;
+}
+
+.atraccionesFav:hover {
+    transform: scale(1.05); 
+}
+
+
+.atraccionesFav h3{
+    color: white;
+    font-size: 20px;
+    padding: 0;
+    margin-bottom: 0;
+    padding: 5px;
+    margin: 5px;
+}
+
+
+
+.atraccionesFav ul{
+    list-style-type: none;
+    margin-top: 5px
+}
+
+.atraccionesFav ul li{
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.atraccionesFav ul li:hover{
+    background-color: #555;
+    border-radius: 10px;
+}
+
+#logoutButton{
+    margin-bottom: 50px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #f55;
+    border: 2px solid #f55;
+    transition: transform 0.3s ease;
+}
+
+#logoutButton:hover{
+    transform: scale(1.1);
+    color: #f77;
+    border: 2px solid #f77;
+}
+
+
+

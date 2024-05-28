@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parque>
+    <responsables>
+        <responsable UID="0000">
+            <area>PLA</area>
+        </responsable>
+        <responsable UID="0001">
+            <tecnico>PLA-01</tecnico>
+        </responsable>
+        <responsable UID="0002">
+            <tecnico>TFW-01</tecnico>
+        </responsable>
+        <responsable UID="0003">
+            <area>TFW</area>
+        </responsable>
+        <responsable UID="0004">
+            <tecnico>PIR-01</tecnico>
+        </responsable>
+        <responsable UID="0005">
+            <tecnico>CCL-01</tecnico>
+        </responsable>
+        <responsable UID="0006">
+            <area>PIR</area>
+        </responsable>
+        <responsable UID="0007">
+            <tecnico>FUT-01</tecnico>
+        </responsable>
+        <responsable UID="0008">
+            <tecnico>PLA-02</tecnico>
+        </responsable>
+        <responsable UID="0009">
+            <area>CCL</area>
+        </responsable>
+        <responsable UID="0010">
+            <tecnico>TFW-02</tecnico>
+        </responsable>
+        <responsable UID="0011">
+            <tecnico>PIR-02</tecnico>
+        </responsable>
+        <responsable UID="0012">
+            <area>FUT</area>
+        </responsable>
+        <responsable UID="0013">
+            <tecnico>FUT-02</tecnico>
+        </responsable>
+        <responsable UID="0014">
+            <tecnico>PLA-03</tecnico>
+        </responsable>
+    </responsables>
+    <areas>
+    <area nombre="Plaza mayor">
+        <decoracion>Decoración de plaza</decoracion>
+        <atracciones>
+            <atraccion ID="PLA-01" claveMan="MANT-01">
+                <nombreComercial>Carrusel</nombreComercial>
+                <estado>OP</estado>
+                <tipo>Giratoria</tipo>
+                <lvlIntesidad>Suave</lvlIntesidad>
+                <alturaMin>0.80</alturaMin>
+                <accesoExpress>false</accesoExpress>
+                <fechaRevision>2023-02-20</fechaRevision>
+            </atraccion>
+            <atraccion ID="PLA-02" claveMan="MANT-02">
+                <nombreComercial>Motospeed</nombreComercial>
+                <estado>OP</estado>
+                <tipo>Montaña rusa</tipo>
+                <lvlIntesidad>Moderada</lvlIntesidad>
+                <alturaMin>1.20</alturaMin>
+                <alturaMax>1.95</alturaMax>
+                <accesoExpress>true</accesoExpress>
+                <fechaRevision>2023-11-01</fechaRevision>
+            </atraccion>
+            <atraccion ID="PLA-03" claveMan="MANT-03">
+                <nombreComercial>Caída libre</nombreComercial>
+                <estado>OP</estado>
+                <lvlIntesidad>Intensa</lvlIntesidad>
+                <alturaMin>1.40</alturaMin>
+                <alturaMax>1.95</alturaMax>
+                <accesoExpress>true</accesoExpress>
+                <fechaRevision>2024-01-02</fechaRevision>
+            </atraccion>
+        </atracciones>
+    </area>
+    <area nombre="The Far West">
+        <decoracion>Decoración de vaqueros</decoracion>
+        <atracciones>
+            <atraccion ID="TFW-01" claveMan="MANT-04">
+                <nombreComercial>Saloon</nombreComercial>
+                <estado>OP</estado>
+                <tipo>Giratoria</tipo>
+                <lvlIntesidad>Moderada</lvlIntesidad>
+                <alturaMin>1.30</alturaMin>
+                <accesoExpress>true</accesoExpress>
+                <fechaRevision>2021-01-01</fechaRevision>
+            </atraccion>
+            <atraccion ID="TFW-02" claveMan="MANT-05">
+                <nombreComercial>Iron Cowboy</nombreComercial>
+                <estado>OB</estado>
+                <tipo>Montaña rusa</tipo>
+                <lvlIntesidad>Intensa</lvlIntesidad>
+                <alturaMin>1.20</alturaMin>
+                <alturaMax>1.90</alturaMax>
+                <accesoExpress>true</accesoExpress>
+            </atraccion>
+            <atraccion ID="TFW-03" claveMan="MANT-06">
+                <nombreComercial>Rápidos de Río Grande</nombreComercial>
+                <estado>OP</estado>
+                <tipo>Acuática</tipo>
+                <lvlIntesidad>Moderada</lvlIntesidad>
+                <alturaMin>1.00</alturaMin>
+                <accesoExpress>true</accesoExpress>
+                <fechaRevision>2024-01-02</fechaRevision>
+            </atraccion>
+        </atracciones>
+    </area>
+    <area nombre="Territorio pirata">
+        <decoracion>Decoración de pirtatas</decoracion>
+        <atracciones>
+            <atraccion ID="PIR-01" claveMan="MANT-07">
+                <nombreComercial>Barco pirata</nombreComercial>
+                <estado>CE</estado>
+                <lvlIntesidad>Moderada</lvlIntesidad>
+                <alturaMin>1.20</alturaMin>
+                <accesoExpress>false</accesoExpress>
+            </atraccion>
+            <atraccion ID="PIR-02" claveMan="MANT-08">
+                <nombreComercial>Minibarco</nombreComercial>
+                <estado>OP</estado>
+                <tipo>Infantil</tipo>
+                <lvlIntesidad>Suave</lvlIntesidad>
+                <alturaMax>1.20</alturaMax>
+                <accesoExpress>false</accesoExpress>
+                <fechaRevision>2024-02-03</fechaRevision>
+            </atraccion>
+            <atraccion ID="PIR-03" claveMan="MANT-09">
+                <nombreComercial>El Kraken</nombreComercial>
+                <estado>CE</estado>
+                <tipo>Giratoria</tipo>
+                <lvlIntesidad>Intensa</lvlIntesidad>
+                <alturaMin>1.40</alturaMin>
+                <accesoExpress>true</accesoExpress>
+                <fechaRevision>2023-08-04</fechaRevision>
+            </atraccion>
+            <atraccion ID="PIR-04" claveMan="MANT-10">
+                <nombreComercial>Siete Mares</nombreComercial>
+                <estado>OP</estado>
+                <tipo>Montaña rusa</tipo>
+                <lvlIntesidad>Intensa</lvlIntesidad>
+                <alturaMin>1.40</alturaMin>
+                <accesoExpress>true</accesoExpress>
+                <fechaRevision>2023-12-02</fechaRevision>
+            </atraccion>
+        </atracciones>
+    </area>
+    <area nombre="Cool Children Land">
+        <decoracion>Decoración infantil</decoracion>
+        <atracciones>
+            <atraccion ID="CCL-01" claveMan="MANT-11">
+                <nombreComercial>Pequecoaster</nombreComercial>
+                <estado>OP</estado>
+                <tipo>Montaña rusa</tipo>
+                <lvlIntesidad>Suave</lvlIntesidad>
+                <alturaMin>0.80</alturaMin>
+                <accesoExpress>true</accesoExpress>
+                <fechaRevision>2023-12-02</fechaRevision>
+            </atraccion>
+        </atracciones>
+    </area>
+    <area nombre="Calle futura">
+        <decoracion>Decoración futurista</decoracion>
+        <atracciones>
+            <atraccion ID="FUT-01" claveMan="MANT-12">
+                <nombreComercial>Nave alocada</nombreComercial>
+                <estado>OP</estado>
+                <tipo>Giratoria</tipo>
+                <lvlIntesidad>Moderada</lvlIntesidad>
+                <alturaMin>1.00</alturaMin>
+                <accesoExpress>false</accesoExpress>
+                <fechaRevision>2023-08-04</fechaRevision>
+            </atraccion>
+            <atraccion ID="FUT-02" claveMan="MANT-13">
+                <nombreComercial>AquaUFO</nombreComercial>
+                <estado>OP</estado>
+                <tipo>Acuática</tipo>
+                <lvlIntesidad>Moderada</lvlIntesidad>
+                <alturaMin>1.00</alturaMin>
+                <alturaMax>1.90</alturaMax>
+                <accesoExpress>true</accesoExpress>
+                <fechaRevision>2019-11-01</fechaRevision>
+            </atraccion>
+        </atracciones>
+    </area>
+    </areas>
+
+</parque>

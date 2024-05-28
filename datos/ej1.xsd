@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!--ELEMENTO PARQUE-->
+    <xs:element name="parque" type="T_parque"/>
+        <!--TIPO PARQUE (ELEMENTOS LISTA)-->
+        <xs:complexType name="T_parque">
+            <xs:sequence>
+                <!--ELEMENTOS RESPONSABLES Y ATRACCIONES (LISTA)-->
+                <xs:element name="responsables" type="T_responsables"/>
+                <xs:element name="areas" type="T_areas"/>
+                <xs:element name="area" type="T_Area"/>                
+            </xs:sequence>
+        </xs:complexType>
+        <!--TIPO AREA (ELEMENTOS LISTA)-->
+        <xs:complexType name="T_Area">
+            <xs:sequence>                
+                <xs:element name="decoracion"/>
+                <xs:element name="atracciones" type="T_atracciones"/>
+            </xs:sequence>
+            <xs:attribute name="nombre" type="xs:string"/>
+        </xs:complexType>
+        <!--TIPO AREAS (LISTA)-->
+        <xs:complexType name="T_areas">
+            <xs:sequence>
+                <!--ELEMENTO AREA-->
+                <xs:element name="area" type="T_Area" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+        <!--TIPO RESPONSABLES (LISTA)-->
+        <xs:complexType name="T_responsables">
+            <xs:sequence>
+                <!--ELEMENTO RESPONSABLE-->
+                <xs:element name="responsable" type="T_responsable" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+        <!--TIPO RESPONSABLE (ELEMENTOS LISTA)-->
+        <xs:complexType name="T_responsable">
+            <xs:sequence>
+                <xs:choice>
+                    <xs:element name="area" type="T_RArea"/>
+                    <xs:element name="tecnico" type="T_RAtraccion"/>
+                </xs:choice>
+            </xs:sequence>
+            <xs:attribute name="UID" type="T_UID" use="required"/>
+        </xs:complexType>
+        <!--TIPO AREA (AREA RESPONSABLE)-->
+        <xs:simpleType name="T_RArea">
+            <xs:restriction base="xs:string">
+                <xs:pattern value="^(PLA|TFW|PIR|CCL|FUT)$"/>
+            </xs:restriction>
+        </xs:simpleType>
+        <!--TIPO TECNICO (TECNICO RESPONSABLE)-->
+        <xs:simpleType name="T_RAtraccion">
+            <xs:restriction base="xs:string">
+                <xs:pattern value="^(PLA|TFW|PIR|CCL|FUT)-\d{2}$"/>
+            </xs:restriction>
+        </xs:simpleType>
+        <!--TIPOS UID (ID RESPONSABLE)-->
+        <xs:simpleType name="T_UID">
+            <xs:restriction base="xs:string">
+                <xs:pattern value="\d{4}"/>
+            </xs:restriction>
+        </xs:simpleType>
+        <!--TIPOS ATRACCIONES (LISTA)-->
+        <xs:complexType name="T_atracciones">
+            <xs:sequence>
+                <!--ELEMENTO ATRACCION-->
+                <xs:element name="atraccion" type="T_atraccion" maxOccurs="unbounded">
+                    <xs:unique name="unique-ID">
+                        <xs:selector xpath="atraccion"/>
+                        <xs:field xpath="@ID"/>
+                    </xs:unique>
+                    <xs:unique name="unique-claveMan">
+                        <xs:selector xpath="atraccion"/>
+                        <xs:field xpath="@claveMan"/>
+                    </xs:unique>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        <!--TIPO ATRACCION (ELEMENTOS LISTA)-->
+        <xs:complexType name="T_atraccion">
+            <xs:sequence>
+                <xs:element name="nombreComercial" type="xs:string"/>
+                <xs:element name="estado" type="T_estado"/>
+                <xs:element name="tipo" type="T_tipoAtr" default="Atraccion"/>
+                <xs:element name="lvlIntesidad" type="T_lvlIntesidad"/>
+                <xs:element name="alturaMin" type="T_alturaMin" minOccurs="0"/>
+                <xs:element name="alturaMax" type="T_alturaMax" minOccurs="0"/>
+                <xs:element name="accesoExpress" type="xs:boolean"/>
+                <xs:element name="fechaRevision" type="xs:date" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute name="ID" type="T_ID" use="required"/>
+            <xs:attribute name="claveMan" type="T_claveMan" use="required"/>
+        </xs:complexType>
+        <!--TIPO ID (ID ATRACCION)-->
+        <xs:simpleType name="T_ID">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="^(PLA|TFW|PIR|CCL|FUT)-\d{2}$"/><!--[A-Z]{3}-\d{2} PARA CUALQUIER AREA-->
+        </xs:restriction>
+        </xs:simpleType>
+        <!--TIPO CLAVE DE MANTENIMIENTO (ID ATRACCION)-->
+        <xs:simpleType name="T_claveMan">
+            <xs:restriction base="xs:string">
+                <xs:pattern value="^(MANT)-\d{2}$"/><!--MANT-01 PARA CUALQUIER AREA-->
+            </xs:restriction>
+        </xs:simpleType>
+        <!--TIPO ESTADO (ESTADO ATRACCION)-->
+        <xs:simpleType name="T_estado">
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="OP"/>
+                <xs:enumeration value="CE"/>
+                <xs:enumeration value="OB"/>
+            </xs:restriction>
+        </xs:simpleType>
+        <!--TIPO TIPO DE ATRACCION (TIPO ATRACCION)-->
+        <xs:simpleType name="T_tipoAtr">
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Montaña rusa"/>
+                <xs:enumeration value="Acuática"/>
+                <xs:enumeration value="Giratoria"/>
+                <xs:enumeration value="Atraccion"/>
+            </xs:restriction>
+        </xs:simpleType>
+        <!--TIPO NIVEL DE INTENSIDAD (NIVEL DE INTENSIDAD ATRACCION)-->
+        <xs:simpleType name="T_lvlIntesidad">
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Infantil"/>
+                <xs:enumeration value="Suave"/>
+                <xs:enumeration value="Moderada"/>
+                <xs:enumeration value="Intensa"/>
+            </xs:restriction>
+        </xs:simpleType>
+        <!--TIPO ALTURA MINIMA (ALTURA MINIMA ATRACCION)-->
+        <xs:simpleType name="T_alturaMin">
+            <xs:restriction base="xs:float">
+                <xs:minInclusive value="0.80"/>
+                <xs:maxInclusive value="1.40"/>
+                <xs:pattern value="\d+(\.\d{1,2})?"/>
+            </xs:restriction>
+        </xs:simpleType>
+        <!--TIPO ALTURA MAXIMA (ALTURA MAXIMA ATRACCION)-->
+        <xs:simpleType name="T_alturaMax">
+            <xs:restriction base="xs:float">
+                <xs:minInclusive value="1.20"/>
+                <xs:maxInclusive value="1.95"/>
+                <xs:pattern value="\d+(\.\d{1,2})?"/>
+            </xs:restriction>
+        </xs:simpleType>    
+</xs:schema>

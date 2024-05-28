@@ -1,0 +1,600 @@
+:root {
+    --color-1: #1D1A39;
+    --color-2: #451952;
+    --color-3: #662549;
+    --color-4: #AE445A;
+    --color-5: #F39F5A;
+    --color-6: #E8BCB9;
+    --colorBG: #1a1a1a;
+}
+
+.bg-custom{
+    background-color: var(--colorBG);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.bg-nav-footer{
+    background-color: #121212;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/*NAVBAR*/
+.navbar-dark{
+    border-bottom: 3px solid #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    color: #fff;
+    
+    font-size: 16px;
+    margin: 0 2px;
+}
+
+.navbar-brand img{
+    width: 70px;
+    height: 70px;
+}
+
+#idGroup{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#logout{
+    color: #f00;
+}
+
+
+.navbar-toggler {
+    border: 0 !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+}
+
+/* Lines of the Toggler */
+.toggler-icon{
+    width: 30px;
+    height: 3px;
+    background-color: #e74c3c;
+    display: block;
+    transition: all 0.2s;
+}
+
+/* Adds Space between the lines */
+.middle-bar{
+    margin: 5px auto;
+}
+
+/* State when navbar is opened (START) */
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+/* State when navbar is opened (END) */
+
+/* State when navbar is collapsed (START) */
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+/* State when navbar is collapsed (END) */
+
+/* Color of Toggler when collapsed */
+.navbar-toggler.collapsed .toggler-icon {
+    background-color: #777777;
+}
+
+.nav-item a{
+    display: inline-block;
+    position: relative;
+    color: #333;
+    text-decoration: none;
+    }
+.nav-item a:after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    transition: all .5s;
+    }
+.nav-item a:hover:after {
+    width: 100%;
+    background: #333;
+    }
+
+
+/*MAIN*/
+main {
+    margin-top: 0.1vw;
+    padding: 0 1px; 
+    box-sizing: border-box;
+}
+
+/*IMAGEN NORIA*/
+.fondoNoria {
+    width: 100%;
+    height: 40vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.fondoNoria img {
+    width: 100%;
+    position: absolute;
+    filter: brightness(50%);
+    z-index: -1;
+}
+
+#texto {
+    position: absolute;
+    margin-top: 5vh;
+    z-index: 1; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 3vw;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0px 0px 5px #000;
+    box-sizing: border-box; 
+    margin-bottom: 0;
+}
+
+
+#texto h1{
+    font-size: 4vw;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0px 0px 5px #000; 
+    box-sizing: border-box; 
+}
+
+/*ATRACCIONES*/
+#atraccionesImportantes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 20px; 
+    box-sizing: border-box; 
+}
+
+#atraccionesImportantes h2 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.atracciones {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.atracciones li {
+    margin: 20px;
+    padding: 0;
+    background-color: var(--color-1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #000;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: calc(100% - 40px); 
+    max-width: 300px; 
+}
+
+.atracciones li:hover {
+    transform: scale(1.1);
+}
+
+.atracciones img {
+    width: 100%;
+    height: 300px;
+    margin: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.textoAtracciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.textoAtracciones h3 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px 0 5px; 
+    
+}
+
+.textoAtracciones p {
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 20px;
+    margin-left: 30px; 
+}
+
+/*MAPA*/
+#localizacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px; 
+    box-sizing: border-box; 
+}
+
+#localizacion h2 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+#map {
+    height: 400px;
+    width: 100%; 
+    max-width: 800px; 
+    box-shadow: 0px 0px 5px #000;
+}
+
+/*COMENTARIOS*/
+#comentarios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 20px; 
+    box-sizing: border-box; 
+}
+
+#comentarios h2 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+#postComentario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    width: 100%; 
+    max-width: 800px; 
+    box-sizing: border-box; 
+}
+
+#postComentario textarea {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: 2px solid var(--color-2);
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Roboto';
+    resize: none;
+    box-sizing: border-box; /* Add this */
+}
+
+.errorMessagesComentarios{
+    color: red;
+    font-weight: bold;
+    margin: 20px;
+
+}
+/*BOTON*/
+#postComentario input {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid var(--color-3);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+#postComentario input:hover {
+    background-color: var(--color-3);
+    color: #fff;
+}
+
+/*COMENTARIOS POSTEADOS*/
+
+/* General container */
+#comentariosPostedContainer {
+    max-width: 800px;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+#comentariosPostedContainer h2 {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+#comentariosPosted ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+}
+
+#comentariosPosted li {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    box-sizing: border-box; 
+}
+
+.userComentario {
+    display: flex;
+    align-items: center;
+}
+
+.userImageContainer{
+    width: 50px; 
+    height: 50px; 
+    overflow: hidden; 
+    position: relative;
+    border-radius: 50%;
+}
+
+.userImageContainer img{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.usernameComentario {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+    margin-left: 10px;
+    
+}
+
+.comentarioP {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+/*FOOTER*/
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    border-top: 3px solid #fff;
+    width: 100%;
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.contacto h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contacto p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.contacto p a {
+    color: var(--color-3);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contacto p a:hover {
+    color: var(--color-4);
+}
+
+.contacto p span {
+    font-weight: bold;
+    color: var(--color-3);
+}
+
+.contacto p span:hover {
+    color: var(--color-4);
+}
+
+.redesSociales {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    margin: 0; 
+    padding: 0; 
+}
+
+.redesSociales li {
+    margin: 10px;
+}
+
+.redesSociales img {
+    width: 50px; 
+    height: 50px; 
+}
+
+.redesSociales img:hover {
+    transform: scale(1.1);
+}
+
+#Copyright {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 80px;
+}
+
+#areas-container {
+    margin-top: 85px;
+}
+
+.formLoginDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+/* TELÉFONO */
+@media only screen and (max-width: 768px) {
+    
+
+    .fondoNoria {
+        height: 60vw;
+    }
+
+    #texto {
+        font-size: 2.5vw;
+    }
+
+    #texto h1 {
+        font-size: 3vw;
+    }
+
+    .atracciones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #map {
+        width: 80%;
+    }
+
+    #postComentario textarea {
+        width: 90%;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .redesSociales img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* TABLET */
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+    .atracciones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #map {
+        width: 60%;
+    }
+
+    #postComentario textarea {
+        width: 70%;
+    }
+}
+
+/* LAPTOP */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .atracciones {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #map {
+        width: 50%;
+    }
+
+    #postComentario textarea {
+        width: 50%;
+    }
+}
+
+/* PC */
+@media only screen and (min-width: 1201px) {
+    #map {
+        width: 30%;
+    }
+
+    #postComentario textarea {
+        width: 100%; 
+        max-width: 800px; 
+    }
+}

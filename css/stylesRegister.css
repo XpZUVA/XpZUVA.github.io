@@ -1,0 +1,104 @@
+:root {
+    --color-1: #1D1A39;
+    --color-2: #451952;
+    --color-3: #662549;
+    --color-4: #AE445A;
+    --color-5: #F39F5A;
+    --color-6: #E8BCB9;
+    --colorBG: #1a1a1a;
+}
+
+
+.formRegisterDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#formRegister{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 200px;
+    background-color: #eee;    
+    padding: 20px;
+    margin-top: 100px;
+}
+
+#formRegister h1{
+    color: var(--color-1);
+    font-size: 34px;
+    margin: 20px;
+}
+
+.input-wrapper {
+    --padding: 16px;
+    --focus-color: black;
+    margin: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper input{
+    padding: var(--padding);
+    border: 2px solid var(--color-1);
+    outline: none;
+    border-radius: 6px;
+    background-color: #eee;
+}
+
+.input-wrapper .placeholder {
+    position: absolute;
+    background-color: #eee;
+    color: var(--color-1);
+    left: var(--padding);
+    padding: 0 4px;
+    transition: all 0.2s ease-in;
+    cursor: text;
+}
+
+.input-wrapper input:is(:focus, :valid) {
+    border: 2px solid var(--color-1);
+}
+
+.input-wrapper input:is(:focus, :valid) + .placeholder {
+    transform: translatey(calc(-1 * var(--padding) - 12px));
+    font-size: 14px;
+    color: var(--color-1);
+}
+
+#registerButton{
+    background-color: transparent;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+#registerButton:hover{
+    background-color: var(--color-1);
+    color: #fff;
+    
+}
+
+.errorMessages{
+    color: red;
+    font-weight: bold;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid red;
+    border-radius: 10px;
+    background-color: #eee;
+    text-align: center;
+}
+
